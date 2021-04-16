@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         tvPlayCount = findViewById(R.id.tvPlayCount)
         tvPlayCount.text = "${playCount.toString()} plays"
-
     }
 
     fun playClick(view: View) {
@@ -36,12 +35,10 @@ class MainActivity : AppCompatActivity() {
         var btnChangeUser = findViewById<Button>(R.id.btnChangeUser)
         val tvUsername = findViewById<TextView>(R.id.tvUsername)
         val etUsername = findViewById<EditText>(R.id.etUsername)
-
         if (btnChangeUser.text == "Change User") {
             btnChangeUser.text = "Apply"
             tvUsername.visibility = View.INVISIBLE
             etUsername.visibility = View.VISIBLE
-
         } else {
             val newUsername = etUsername.text.toString()
             if (newUsername.trim().isNotEmpty()) {

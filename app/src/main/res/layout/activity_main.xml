@@ -14,13 +14,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="invisible"
-        android:text=""/>
+        android:focusable="true"/>
 
     <TextView
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ihazacatz"
+        android:text="@string/initial_user"
         app:layout_constraintEnd_toStartOf="@id/btnChangeUser"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +74,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mac Miller"
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintBottom_toTopOf="@+id/tvPlayCount"
         app:layout_constraintTop_toBottomOf="@+id/tvSongTitle"
         app:layout_constraintStart_toStartOf="parent"

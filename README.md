@@ -1,6 +1,7 @@
-# Dotify (hw2) by Vincent Ma
+# Dotify (hw3) by Vincent Ma
 
-This is a music app that displays a song being played.
+This is a music app that displays a library of music. Each song is clickable, and can bring you to a
+music player with some extra settings.
 
 ## Extra credit
 No extra credit attempts this time. :(

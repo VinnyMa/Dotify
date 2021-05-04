@@ -7,43 +7,21 @@
     android:padding="16dp"
     tools:context=".PlayerActivity">
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"
-        android:focusable="true"/>
-
-    <TextView
-        android:id="@+id/tvUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/initial_user"
-        app:layout_constraintEnd_toStartOf="@id/btnChangeUser"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/barrierTop" />
-
     <Button
-        android:id="@+id/btnChangeUser"
+        android:id="@+id/btnSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change User"
+        android:text="Settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvUsername"
-        app:layout_constraintBottom_toTopOf="@id/barrierTop"
-        android:onClick="changeUser"/>
+        app:layout_constraintBottom_toTopOf="@id/barrierTop" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="tvUsername,btnChangeUser" />
+        app:constraint_referenced_ids="btnSettings" />
 
     <ImageView
         android:id="@+id/ivAlbumCover"
@@ -106,8 +84,7 @@
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnNext"
-        app:layout_constraintStart_toEndOf="@+id/btnPrevious"
-        android:onClick="playClick"/>
+        app:layout_constraintStart_toEndOf="@+id/btnPrevious"/>
 
     <ImageButton
         android:id="@+id/btnPrevious"
@@ -118,8 +95,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnPlay"
         app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="prevClick"/>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ImageButton
         android:id="@+id/btnNext"
@@ -129,6 +105,5 @@
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPlay"
-        android:onClick="nextClick"/>
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

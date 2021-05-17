@@ -27,10 +27,14 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
     private val navController by lazy { findNavController(R.id.navHost) }
 
+    private val dotifyApp: DotifyApplication by lazy { application as DotifyApplication }
+    private val dataRepo by lazy { dotifyApp.dataRepo }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         title = "Settings"
         binding = ActivitySettingsBinding.inflate(layoutInflater).apply { setContentView(root) }
+
         with(binding) {
 //            val song = intent.extras?.getParcelable<Song>(SONG_KEY)
 

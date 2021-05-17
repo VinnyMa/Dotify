@@ -8,9 +8,9 @@
     tools:context=".ProfileFragment">
 
     <ImageView
-        android:id="@+id/ivPandaman"
-        android:layout_width="wrap_content"
-        android:layout_height="250sp"
+        android:id="@+id/ivProfilePic"
+        android:layout_width="350sp"
+        android:layout_height="300sp"
         android:src="@drawable/pandaman"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,44 +24,16 @@
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivPandaman" />
+        app:layout_constraintTop_toBottomOf="@id/ivProfilePic" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
+
+    <Button
+        android:id="@+id/btnRefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="tvName" />
-
-    <TextView
-        android:id="@+id/tvAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age: Even he doesn't know"
-        app:layout_constraintBottom_toTopOf="@+id/tvBirthday"
-        app:layout_constraintTop_toBottomOf="@id/barrier"
+        android:text="Refresh"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/tvBirthday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Birthday: February 26th"
-        app:layout_constraintBottom_toTopOf="@+id/tvBounty"
-        app:layout_constraintTop_toBottomOf="@+id/tvAge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tvBounty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bounty: 3,333,333 Belly"
-        app:layout_constraintTop_toBottomOf="@+id/tvBirthday"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
